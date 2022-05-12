@@ -1,0 +1,98 @@
+#header-title {
+    color: rgb(186, 28, 28);
+}
+
+body {
+    /* background-color: rgb(33, 32, 32); */
+}
+
+.body-container {
+    align-content: center;
+    margin-left: 20%;
+    margin-right:20%;
+}
+
+#search-container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#search-result {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#hero-collection {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.heroImg {
+    max-width: 200px;
+}
+
+.card {
+    width: 200px;
+    height: 400px;
+    margin: auto;
+    margin-bottom: 16px;;
+    background-color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 0;
+}
+
+.card:hover {
+    background-color: rgb(186, 28, 28);
+    border: rgb(186, 28, 28) solid 8px;
+    transition: background-color .2s;
+    transition: border .2s;
+}
+
+.hero-name {
+    font-family: "RobotoCondensed" Bold,Trebuchet MS,Helvetica,Arial,sans-serif;;
+    margin: 16px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white
+}
+
+.result-box {
+    display: flex;
+    background-color: rgb(186, 28, 28);
+    margin: 40px;
+    width: 800px;
+    position: relative;
+}
+
+.search-image {
+    width: 300px;
+    float: left;
+}
+
+.result-hero-name {
+    font-family: "RobotoCondensed" Bold,Trebuchet MS,Helvetica,Arial,sans-serif;;
+    margin: 24px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.hero-description {
+    position:relative;
+    color: white;
+}
+
+.close-btn {
+    font-size: 40px;
+    border: none;
+    background-color: rgb(186, 28, 28);
+    color: white;
+    line-height: 12px;
+    margin: 16px;
+    position:absolute;
+    top:0;
+    right:0;
+    padding: 0;
+}
