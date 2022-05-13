@@ -11,25 +11,28 @@
     <script type="text/javascript" src="./index.js"></script>
 </head>
 <body>
-    <div id="header">
-        <h1 id="header-title">Marvel Heros</h1>
-        <span>Flatiron Software Development Bootcamp - Phase 1 Project</span>
+    <div id="header-background">
+        <div class="header-container">
+            <h1 id="header-title">Marvel Characters</h1>
+            <span class="subtitle">Flatiron Software Development Bootcamp - Phase 1 Project</span>
+        </div>
     </div>
+    <img class="banner" src="src/marvel_banner.jpg">
     <div class = "body-container">
     <div id="search-container">
         <form id="search-form">
-            <h3>Search Hero</h3>
+            <!-- <h3>Search Hero</h3> -->
             <input
                 type="text"
                 name="name"
                 value=""
-                placeholder="Enter a hero's name"
+                placeholder="Character Name"
                 id="search-name"
             />
             <input 
                 type="submit"
                 name="submit"
-                value="Search hero"
+                value="Search"
                 id="submit"
             />
         </form>
