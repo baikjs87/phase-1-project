@@ -25,16 +25,11 @@
     color: rgb(255, 170, 0);
 }
 
-body {
-    /* background-color: rgb(33, 32, 32); */
-}
-
 .body-container {
     position: relative;
     display: block;
-    margin: 0 auto;
-    max-width: 1080px;
-    /* top: 153px; */
+    margin: auto;
+    width: 80%;
 }
 
 #search-container {
@@ -51,7 +46,7 @@ body {
 #hero-collection {
     display: flex;
     flex-flow: row wrap;
-    justify-content:space-between;
+    justify-content:left;
     margin-top: 40px;
 }
 
@@ -94,8 +89,10 @@ body {
     background-color: rgb(186, 28, 28);
     margin-left: 300px;
     padding: 24px;
-    min-height: 450px;
-    position:relative;
+    height: 450px;
+    width: 500px;
+    position: relative;
+    overflow: auto;
 }
 
 .search-image {
@@ -105,7 +102,7 @@ body {
 
 .result-hero-name {
     font-family: "RobotoCondensed" Bold,Trebuchet MS,Helvetica,Arial,sans-serif;
-    margin-top: 8px;
+    margin-top: 16px;
     font-size: 24px;
     font-weight: bold;
     color: white;
@@ -121,6 +118,7 @@ body {
 
 .comic-book-container {
     margin-top: 24px;
+    margin-bottom: 32px;
 }
 
 .book-list-title {
@@ -135,19 +133,17 @@ body {
 .result-link {
     color: yellow;
     margin-bottom: 24px;
-    position: absolute;
-    bottom: 0;
+    /* position: absolute;
+    bottom: 0; */
 }
 
 .close-btn {
-    font-size: 40px;
+    font-size: 32px;
     border: none;
-    background-color: rgb(186, 28, 28);
+    background-color: none;
     color: white;
-    line-height: 12px;
-    margin: 16px;
     position:absolute;
-    top:0;
-    right:0;
+    top:-4px;
+    right:16px;
     padding: 0;
 }

@@ -32,55 +32,35 @@ function searchHero(e) {
     )
         .then((result) => result.json())
         .then((data) => {
+            // const dataName = hero.name.toLowerCase();
+            // data.data.results.filter((hero) => {
+            //     if (dataName.inclu === searchText) {
+            //         showResult(hero);
+            //     } else {
+            //         const errorResult =
+            //             document.querySelector(".search-result");
+            //         const errorMsg = document.createElement("h1");
+            //         errorMsg.className = "error-msg";
+            //         errorMsg.textContent = "Hero Not Found :(";
+            //         errorResult.appendChild(errorMsg);
+            //     }
+            // });
+
             for (const hero of data.data.results) {
                 if (hero.name.toLowerCase() === searchText) {
                     console.log(hero);
                     showResult(hero);
-                } else {
-                    const errorResult =
-                        document.querySelector(".search-result");
-                    const errorMsg = document.createElement("h1");
-                    errorMsg.className = "error-msg";
-                    errorMsg.textContent = "No Hero Found :(";
-                    console.log(errorMsg);
-                    errorResult.appendChild(errorMsg);
                 }
+                // else {
+                //     const errorResult =
+                //         document.querySelector(".search-result");
+                //     const errorMsg = document.createElement("h1");
+                //     errorMsg.className = "error-msg";
+                //     errorMsg.textContent = "No Hero Found :(";
+                //     console.log(errorMsg);
+                //     errorResult.appendChild(errorMsg);
+                // }
             }
-            // for (const hero of data.data.results) {
-            //     const resultName = hero.name.toLowerCase();
-            //     const obj = { name: resultName };
-            //     const hasVal = Object.values(obj).includes(`${searchText}`);
-            // }
-            // if (hasVal === true) {
-            //     showResult(hero);
-            // } else {
-            //     const errorResult = document.querySelector(".search-result");
-            //     const errorMsg = document.createElement("h1");
-            //     errorMsg.className = "error-msg";
-            //     errorMsg.textContent = "Hero Not Found :(";
-            //     console.log(errorMsg);
-            //     errorResult.appendChild(errorMsg);
-            // }
-
-            // }
-            // for (const hero of data.data.results) {
-            //     if (hero.name.toLowerCase() === searchText) {
-            //         asdf = true;
-            //     }
-            // }
-            // if (asdf === true) {
-            //     console.log(hero);
-            //     showResult(hero);
-            // } else if (asdf === false) {
-            //     const errorResult = document.querySelector(".search-result");
-            //     const errorMsg = document.createElement("h1");
-            //     errorMsg.className = "error-msg";
-            //     errorMsg.textContent = "No Hero Found :(";
-            //     // const msgCount = document.get
-            //     // if(errorMsg < 2)
-            //     console.log(errorMsg);
-            //     errorResult.appendChild(errorMsg);
-            // }
         });
 
     function showResult(data) {
@@ -115,8 +95,8 @@ function searchHero(e) {
         const bookListTitle = document.createElement("h2");
         bookListTitle.className = "book-list-title";
         bookListTitle.textContent = `${data.name} has been featured in these comic books:`;
-        const comicBooks = document.createElement("li");
-        for (const books of data.comics.items) {
+        for (const books of data.series.items) {
+            const comicBooks = document.createElement("li");
             comicBooks.textContent = `${books.name}`;
             bookList.appendChild(comicBooks);
         }
@@ -130,7 +110,8 @@ function searchHero(e) {
         link.textContent = `More information on ${data.name}!`;
 
         //------ Create result close button
-        const closeBox = document.createElement("button");
+        const closeBox = document.createElement("span", "button");
+        closeBox.setAttribute("type", "button");
         closeBox.className = "close-btn";
         closeBox.textContent = "x";
 
