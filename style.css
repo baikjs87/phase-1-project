@@ -1,9 +1,7 @@
 #header-background {
     position: relative;
     background-color: rgb(28, 27, 27);
-    width: 100%;
     padding: 20px;
-    /* background-position: center; */
     z-index: 1
 }
 
@@ -13,29 +11,53 @@
 
 .header-container {
     position: relative;
-    margin-left: 5%;
+    margin-left: 3%;
 }
 
 #header-title {
     color: white;
     position: relative;
+    margin: 0 0 12px;
+    font-size: 3rem;
 }
 
 .subtitle {
     color: rgb(255, 170, 0);
 }
 
+body {
+    margin: 0;
+    width: 100%;
+}
+
 .body-container {
-    position: relative;
-    display: block;
-    margin: auto;
-    width: 80%;
+    justify-content: center;
+    display: grid;
+    margin: 0 24px 0 24px
 }
 
 #search-container {
     margin-top: 40px;
     margin-bottom: 40px;
-    margin-left: 5%;
+    /* margin-left: 5%; */
+}
+
+#search-name {
+    display: flex;
+    position: relative;
+    border: 0;
+    border-bottom: 2px solid #151515;
+    width: 50%;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    border-radius: 0;
+    text-transform: uppercase;
+    font: 800 24px/1 RobotoCondensed,Trebuchet MS,Helvetica,Arial,sans-serif;
+}
+
+#submit {
+    position: relative;
+    display: inline;
 }
 
 #search-result {
@@ -44,24 +66,43 @@
 }
 
 #hero-collection {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    transition: max-height 1s ease-out;
+    max-width: 1240px;
+    margin-bottom: 200px;
+    column-gap: 10px;
+    overflow: hidden;
+    /* 
+    margin: 0 auto; 
     flex-flow: row wrap;
+    padding: 10px 20px 0;
+    column-gap: 10px;*/
+
+    /* display: flex;
     justify-content:left;
-    margin-top: 40px;
+    margin-top: 40px; */
 }
 
 .heroImg {
-    max-width: 200px;
+    position: relative;
+    overflow: hidden;
+    display: block;
+    width: 100%;
 }
 
 .card {
-    width: 200px;
-    height: 400px;
-    margin: 6px;
-    margin-bottom: 16px;;
+    position: relative;
+    display: block;
     background-color: rgb(0, 0, 0);
     border: none;
     border-radius: 0;
+    margin: 6px 0 4px;
+    max-width: 100%;
+    /* 
+    margin-bottom: 16px;;
+    height: 400px;
+*/
 }
 
 .card:hover {
@@ -72,38 +113,51 @@
 }
 
 .hero-name {
-    font-family: "RobotoCondensed" Bold,Trebuchet MS,Helvetica,Arial,sans-serif;;
+    font: 400 16px/1.1 RobotoCondensed Bold,Trebuchet MS,Helvetica,Arial,sans-serif;
     margin: 16px;
     font-size: 16px;
     font-weight: bold;
     color: white
 }
 
+.search-result {
+    margin-bottom: 30px;
+}
+
 .result-box {
     position: relative; 
-    max-width: 800px;
-    margin-left: 5%;
+    /* max-width: 700px; */
+    margin: 8px 20% 16px 5%;
+    /* margin-right: 20%; */
+    max-height: 450px;
+    display: block;
+    max-width: 1240px;
+    display: grid;
+    grid-template-columns: minmax(150px, 300px) minmax(150px,2fr);
+    grid-template-rows: 450px;
+    transition: max-height 1s ease-out;
 }
 
 .detail-container {
     background-color: rgb(186, 28, 28);
-    margin-left: 300px;
     padding: 24px;
-    height: 450px;
-    width: 500px;
+    max-height: 450px;
+    width: 100%;
     position: relative;
     overflow: auto;
 }
 
 .search-image {
-    width: 300px;
+    width:100%;
+    max-width: 300px;
     float: left;
+    max-height: 450px;
 }
 
 .result-hero-name {
-    font-family: "RobotoCondensed" Bold,Trebuchet MS,Helvetica,Arial,sans-serif;
+    font: 400 32px/1.1 RobotoCondensed Bold,Trebuchet MS,Helvetica,Arial,sans-serif;
+    letter-spacing: 1px;
     margin-top: 16px;
-    font-size: 24px;
     font-weight: bold;
     color: white;
     /* width:fit-content;
@@ -138,7 +192,8 @@
 }
 
 .close-btn {
-    font-size: 32px;
+    font: 32px/1.1 Roboto,Trebuchet MS,Helvetica,Arial,sans-serif;
+    /* font-size: 32px; */
     border: none;
     background-color: none;
     color: white;
