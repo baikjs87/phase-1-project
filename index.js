@@ -162,6 +162,11 @@ function searchHero(e) {
 		link.setAttribute("href", `${data.urls[1].url}`)
 		link.textContent = `More information on ${data.name}!`
 
+		//------ Marvel attribution
+		const attribution = document.createElement("p")
+		attribution.className = "attribution"
+		attribution.textContent = "Data provided by Marvel. © 2014 Marvel"
+
 		//------ Create result close button
 		const closeBox = document.createElement("span", "button")
 		closeBox.setAttribute("type", "button")
@@ -191,6 +196,7 @@ function searchHero(e) {
 		detailContainer.appendChild(closeBox)
 		detailContainer.appendChild(comicBookBox)
 		detailContainer.appendChild(link)
+		detailContainer.appendChild(attribution)
 
 		resultBox.appendChild(searchImg)
 		resultBox.appendChild(detailContainer)
